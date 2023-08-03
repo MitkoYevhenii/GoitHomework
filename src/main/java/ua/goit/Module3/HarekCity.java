@@ -1,0 +1,57 @@
+package ua.goit.Module3;
+
+import java.util.Arrays;
+
+public class HarekCity {
+    public String[] createEmptyNameArray() {
+        return new String[0];
+    }
+
+    public int[] createAgeArray(int age1, int age2, int age3, int age4) {
+        return new int[]{age1, age2, age3, age4};
+    }
+
+    public void fixNames(String[] names, String[] toReplace) {
+        names[1] = toReplace[0];
+        names[3] = toReplace[1];
+        System.out.println(Arrays.toString(names));
+    }
+
+    public String firstAndLastTogether(String[] names) {
+        return names[0] + " AND " +   names[names.length - 1] + " TOGETHER";
+    }
+
+    public void changeElectResult(String[] results) {
+        String temp = results[0];
+        results[0] = results[results.length - 1];
+        results[results.length - 1] = temp;
+    }
+
+    public String[] changeElectResultAgain(String[] results) {
+        return new String[]{results[1], results[2], results[3]};
+    }
+
+    public char[][] createKeyboard() {
+        return new char[][]{
+            {'1', '2', '3'},
+            {'4', '5', '6'},
+            {'7', '8', '9'},
+            {'*', '0', '#'},
+        };
+    }
+
+    public String[] makeCopy(String[] names) {
+        System.out.println("Copied!");
+        return Arrays.copyOf(names, names.length);
+    }
+
+    public void printKeyboard() {
+        char[][] keyboard = createKeyboard();
+        System.out.println(Arrays.toString(keyboard[0]) + "\n" + Arrays.toString(keyboard[1]) + "\n" + Arrays.toString(keyboard[2]) + "\n" + Arrays.toString(keyboard[3]));
+    }
+
+    public static void main(String[] args) {
+        HarekCity main = new HarekCity();
+        System.out.println(Arrays.toString(main.makeCopy(new String[]{"Піські", "Попкі"})));
+    }
+}
