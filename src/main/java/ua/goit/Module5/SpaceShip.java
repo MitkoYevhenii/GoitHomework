@@ -28,10 +28,16 @@ public class SpaceShip {
         return serialNumber.startsWith("SN") && serialNumber.length() == 8;
     }
 
+    public void printInfo() {
+        System.out.println("Name is " + name + ", serial number is " + serialNumber);
+    }
+
     public static void main(String[] args) {
         SpaceShip ship = new SpaceShip();
-        ship.setName("Walker");
-        System.out.println(ship.getName()); //Should be Walker
 
+        ship.setName("Voyager");
+        ship.setSerialNumber("SN506788");
+
+        ship.printInfo();
     }
 }
