@@ -9,16 +9,16 @@ public class Main {
 
         //---------------------Generation randoms numbers---------------------//
         long startTime = System.currentTimeMillis();
-        int[] arr = main.randomIntArray(100_000_000, 0, 100_000_0);
+        int[] arr = main.randomIntArray(100_000, 0, 100_000_0);
         long endTime = System.currentTimeMillis();
         System.out.println("Time generation numbers: " + (endTime - startTime) + " milliseconds");
 
         //---------------------Bubble - sort---------------------//
-//        long startTime = System.currentTimeMillis();
-//        int[] arrBubbleSort = bubbleSort(arr);
-//        long endTime = System.currentTimeMillis();
-////        System.out.println(Arrays.toString(arrBubbleSort));
-//        System.out.println("Time bubble sort: " + (endTime - startTime) + " milliseconds");
+        startTime = System.currentTimeMillis();
+        int[] arrBubbleSort = bubbleSort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println(Arrays.toString(arrBubbleSort));
+        System.out.println("Time bubble sort: " + (endTime - startTime) + " milliseconds");
 
         //---------------------Tim - sort---------------------//
         int[] arrTimSort = Arrays.copyOf(arr, arr.length);

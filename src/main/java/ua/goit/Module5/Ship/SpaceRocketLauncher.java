@@ -1,4 +1,4 @@
-package ua.goit.Module5;
+package ua.goit.Module5.Ship;
 
 public class SpaceRocketLauncher {
     // private fields with a number of missiles
